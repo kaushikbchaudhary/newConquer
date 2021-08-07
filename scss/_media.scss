@@ -1,0 +1,14 @@
+// teblets & Smaller
+@media (max-width: 800px) {
+  #header {
+    &-home {
+      & .nav {
+        height: 200px;
+        background: $light-color;
+        ul {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

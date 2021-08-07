@@ -1,0 +1,86 @@
+// utility class
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.current {
+  background: rgb(75, 72, 72);
+  color: #fff;
+}
+
+.lead {
+  font-size: 22px;
+}
+.hide {
+  opacity: 0.6;
+}
+// Set Text color function
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+%btn-shared {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1rem 0;
+  text-decoration: none;
+}
+
+.btn {
+  @extend %btn-shared;
+  font-weight: 100;
+  &:hover {
+    opacity: 0.7;
+  }
+  &-light {
+    background-color: #fff;
+    color: set-text-color(#fff);
+  }
+  &-dark {
+    background-color: #333;
+    color: set-text-color(#333);
+  }
+  &-primary {
+    background-color: $primary-color;
+    color: set-text-color($primary-color);
+  }
+  &-secondary {
+    background-color: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+  &-medium {
+    background-color: $medium-color;
+    color: set-text-color($medium-color);
+  }
+  &-transperant {
+    border: gray solid 1px;
+  }
+}
+
+.grid-templete {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  div {
+    background: rgb(233, 227, 227);
+  }
+}
+.primary-text {
+  color: $primary-color;
+}
+.secondary-text {
+  color: $secondary-color;
+}
+.medium-text {
+  color: $medium-color;
+}
