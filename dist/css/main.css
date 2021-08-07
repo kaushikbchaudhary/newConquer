@@ -1,0 +1,250 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 0;
+  overflow: hidden; }
+
+.current {
+  background: #4b4848;
+  color: #fff; }
+
+.lead {
+  font-size: 22px; }
+
+.hide {
+  opacity: 0.6; }
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1rem 0;
+  text-decoration: none; }
+
+.btn {
+  font-weight: 100; }
+  .btn:hover {
+    opacity: 0.7; }
+  .btn-light {
+    background-color: #fff;
+    color: #000; }
+  .btn-dark {
+    background-color: #333;
+    color: #fff; }
+  .btn-primary {
+    background-color: green;
+    color: #fff; }
+  .btn-secondary {
+    background-color: blue;
+    color: #fff; }
+  .btn-medium {
+    background-color: red;
+    color: #fff; }
+  .btn-transperant {
+    border: gray solid 1px; }
+
+.grid-templete {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem; }
+  .grid-templete div {
+    background: #e9e3e3; }
+
+.primary-text {
+  color: green; }
+
+.secondary-text {
+  color: blue; }
+
+.medium-text {
+  color: red; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+p {
+  padding: 20px; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+ul {
+  list-style: none; }
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase; }
+
+#header-home {
+  height: 70vh;
+  background: url("../img/bg-1.jpg") no-repeat center center/cover; }
+  #header-home .nav {
+    height: 90px;
+    background: #333;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    position: fixed; }
+    #header-home .nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center; }
+      #header-home .nav ul li {
+        margin: 10px 0;
+        padding: 1rem 1.5rem; }
+        #header-home .nav ul li a {
+          border: #fff solid 1px;
+          border-radius: 1px;
+          padding: 1rem;
+          color: #fff;
+          text-transform: uppercase;
+          transition: all 0.5s ease-in-out; }
+          #header-home .nav ul li a:hover {
+            background: #4b4848;
+            color: #fff; }
+  #header-home .header-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff; }
+    #header-home .header-content h1 {
+      font-size: 80px;
+      text-shadow: 0.2rem 0.2rem #333; }
+
+#home-a {
+  margin: 30px; }
+  #home-a .grid-templete div h3 {
+    padding: 20px;
+    text-align: center; }
+  #home-a .grid-templete div p {
+    text-align: left; }
+  #home-a .grid-templete div a.btn {
+    margin-left: 40%; }
+
+#home-b {
+  margin: 30px; }
+  #home-b .grid-templete {
+    grid-template-columns: repeat(2, 1fr); }
+    #home-b .grid-templete div {
+      text-align: center; }
+      #home-b .grid-templete div p {
+        text-align: left; }
+      #home-b .grid-templete div a.btn {
+        margin-left: 60%; }
+
+#about .parallax {
+  background: url("../img/bg-2.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  line-height: 2.1; }
+  #about .parallax div {
+    padding: 30px;
+    width: 600px; }
+    #about .parallax div h2 {
+      text-align: center; }
+
+#services .column {
+  margin: 30px; }
+  #services .column .grid-templete {
+    grid-template-columns: repeat(4, 1fr); }
+    #services .column .grid-templete div {
+      text-align: center; }
+      #services .column .grid-templete div p {
+        text-align: left; }
+
+#services .templete {
+  margin: 30px; }
+  #services .templete .grid-templete {
+    grid-template-columns: repeat(1, 1fr); }
+    #services .templete .grid-templete div h3 {
+      padding: 20px 20px;
+      text-align: left; }
+    #services .templete .grid-templete div p {
+      text-align: left; }
+    #services .templete .grid-templete div a.btn {
+      margin-left: 20px; }
+
+#contact .parallax {
+  background: url("../img/bg-3.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #contact .parallax div {
+    max-width: 600px;
+    margin: 0 auto; }
+    #contact .parallax div form {
+      display: grid;
+      grid-template-areas: "h1 h1" "box box" "item-1 item-2" "btn btn";
+      grid-gap: 1rem; }
+      #contact .parallax div form h1 {
+        grid-area: h1;
+        text-align: center;
+        text-shadow: 0.2rem 0.2rem #333;
+        color: #fff;
+        font-size: 40px; }
+      #contact .parallax div form .box {
+        grid-area: box;
+        background-color: #fff;
+        opacity: 0.5;
+        border-radius: 10px; }
+      #contact .parallax div form #item-1 {
+        grid-area: item-1; }
+      #contact .parallax div form #item-2 {
+        grid-area: item-2; }
+      #contact .parallax div form .btn {
+        grid-area: btn;
+        text-align: center;
+        width: 100px; }
+      #contact .parallax div form input,
+      #contact .parallax div form textarea {
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        width: 100%;
+        background-color: #fff;
+        opacity: 0.5;
+        border-radius: 5px;
+        border: #fff 1px solid; }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  opacity: 0.8; }
+  .footer hr {
+    height: 2px;
+    width: 100%;
+    color: #333;
+    opacity: 0.8; }
+
+@media (max-width: 800px) {
+  #header-home .nav {
+    height: 200px;
+    background: #fff; }
+    #header-home .nav ul {
+      flex-direction: column; } }
