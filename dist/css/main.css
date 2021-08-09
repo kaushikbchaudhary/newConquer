@@ -137,7 +137,7 @@ h3 {
   #home-a .grid-templete div p {
     text-align: left; }
   #home-a .grid-templete div a.btn {
-    margin-left: 40%; }
+    margin: 0 auto; }
 
 #home-b {
   margin: 30px; }
@@ -147,8 +147,6 @@ h3 {
       text-align: center; }
       #home-b .grid-templete div p {
         text-align: left; }
-      #home-b .grid-templete div a.btn {
-        margin-left: 60%; }
 
 #about .parallax {
   background: url("../img/bg-2.jpg") no-repeat center center/cover;
@@ -199,7 +197,8 @@ h3 {
     #contact .parallax div form {
       display: grid;
       grid-template-areas: "h1 h1" "box box" "item-1 item-2" "btn btn";
-      grid-gap: 1rem; }
+      grid-gap: 1rem;
+      grid-area: 4/2/5/3; }
       #contact .parallax div form h1 {
         grid-area: h1;
         text-align: center;
@@ -211,14 +210,6 @@ h3 {
         background-color: #fff;
         opacity: 0.5;
         border-radius: 10px; }
-      #contact .parallax div form #item-1 {
-        grid-area: item-1; }
-      #contact .parallax div form #item-2 {
-        grid-area: item-2; }
-      #contact .parallax div form .btn {
-        grid-area: btn;
-        text-align: center;
-        width: 100px; }
       #contact .parallax div form input,
       #contact .parallax div form textarea {
         padding: 0.5rem;
@@ -228,6 +219,14 @@ h3 {
         opacity: 0.5;
         border-radius: 5px;
         border: #fff 1px solid; }
+      #contact .parallax div form #item-1 {
+        grid-area: item-1; }
+      #contact .parallax div form #item-2 {
+        grid-area: item-2; }
+      #contact .parallax div form .btn {
+        grid-area: btn;
+        text-align: center;
+        width: 100px; }
 
 .footer {
   display: flex;
@@ -244,7 +243,20 @@ h3 {
 
 @media (max-width: 800px) {
   #header-home .nav {
-    height: 200px;
-    background: #fff; }
+    height: 400px;
+    position: relative; }
     #header-home .nav ul {
-      flex-direction: column; } }
+      flex-direction: column; }
+  .grid-templete {
+    grid-template-columns: repeat(1, 1fr); }
+  #home-a .grid-templete {
+    grid-template-columns: repeat(1, 1fr); }
+  #home-b .grid-templete {
+    grid-template-columns: repeat(1, 1fr); }
+    #home-b .grid-templete .a.btn {
+      margin: 10px; }
+  #services .column .grid-templete {
+    grid-template-columns: repeat(1, 1fr); } }
+
+#contact form {
+  margin: 0 20px; }

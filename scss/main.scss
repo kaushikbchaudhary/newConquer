@@ -106,7 +106,7 @@ h3 {
           text-align: left;
         }
         a.btn {
-          margin-left: 40%;
+          margin: 0 auto;
         }
       }
     }
@@ -120,9 +120,6 @@ h3 {
         text-align: center;
         p {
           text-align: left;
-        }
-        a.btn {
-          margin-left: 60%;
         }
       }
     }
@@ -209,6 +206,7 @@ h3 {
           "item-1 item-2"
           "btn btn";
         grid-gap: 1rem;
+        grid-area: 4/2/5/3;
         h1 {
           grid-area: h1;
           text-align: center;
@@ -222,17 +220,6 @@ h3 {
           opacity: 0.5;
           border-radius: 10px;
         }
-        #item-1 {
-          grid-area: item-1;
-        }
-        #item-2 {
-          grid-area: item-2;
-        }
-        .btn {
-          grid-area: btn;
-          text-align: center;
-          width: 100px;
-        }
         input,
         textarea {
           padding: 0.5rem;
@@ -243,6 +230,17 @@ h3 {
           border-radius: 5px;
           border: #fff 1px solid;
           // overflow: hidden;
+        }
+        #item-1 {
+          grid-area: item-1;
+        }
+        #item-2 {
+          grid-area: item-2;
+        }
+        .btn {
+          grid-area: btn;
+          text-align: center;
+          width: 100px;
         }
       }
     }
